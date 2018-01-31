@@ -1,0 +1,201 @@
+
+.board{
+top: 40px;
+position: relative;
+display: grid;
+grid-template-columns:1fr 1fr;
+grid-template-rows:1fr 1fr;
+grid-template-areas:
+"green red"
+"yellow blue"
+;
+width: 400px;
+height: 400px;
+text-align:center;
+margin: auto;
+border-radius: 100%;
+@media #{$phone-max}{
+width:64vw;
+height:64vw;
+}
+}
+.simon-color{
+display: inline-block;
+position: relative;
+height: 100%;
+width:100%;
+}
+.green{
+grid-area:green;
+border-top-left-radius: 100%;
+background: hsl(115, 31%, 43%);
+}
+.red{
+grid-area:red;
+border-top-right-radius: 100%;
+background: hsl(1, 40%, 43%);
+}
+.yellow{
+grid-area:yellow;
+border-bottom-left-radius: 100%;
+background: hsl(62, 40%, 43%);
+}
+.blue{
+grid-area:blue;
+border-bottom-right-radius: 100%;
+background: hsl(229, 40%, 43%);
+}
+.inline{
+display: inline-block;
+}
+
+.menu{
+position:relative;
+top:40px;
+background:hsl(0, 0%, 10%);
+margin:auto;
+width: 200px;
+height: 200px;
+transform: translate(0, -150%);
+border-radius:100%;
+
+@media #{$phone-max}{
+transform: translate(0, -150%);
+margin-top: 0;
+width:32vw;
+height:32vw;
+}
+}
+.start{
+position: relative;
+display:table-caption;
+margin: auto;
+padding: 0;
+background: hsl(107, 42%, 40%);
+border-radius: 100%;
+box-shadow : 0px 5px 7px black;
+border: none;
+outline: none;
+width: 33%;
+height: 33%;
+@include center(false);
+}
+.count{
+position: relative;
+margin: auto;
+color:hsl(175, 75%, 43%);
+width: 40%;
+height: 22%;
+font-family: 'Inconsolata', monospace;
+font-size: 52px;
+text-align: center;
+line-height: 22px;
+@include center-vertical(true)
+
+}
+
+
+.shine{
+position: relative;
+background: hsl(107, 42%, 34%);
+border-radius: 100%;
+border: 2px solid hsl(107, 42%, 31%);
+width: 70%;
+height: 70%;
+margin: auto;
+cursor: pointer;
+}
+
+.start:hover{
+background:hsl(107, 97%, 40%);
+cursor: pointer;
+}
+.green-hover:hover{
+background: hsl(115, 31%, 54%)!important;
+}
+.red-hover:hover{
+background: hsl(0, 45%, 56%)!important;
+}
+.yellow-hover:hover{
+background: hsl(62, 45%, 54%)!important;
+}
+.blue-hover:hover{
+background: hsl(229, 45%, 54%)!important;
+}
+
+.clicked-grn {
+-webkit-animation: 700ms pushed-grn ease-out;
+-moz-animation: 700ms pushed-grn ease-out;
+-ms-animation: 700ms pushed-grn ease-out;
+-o-animation: 700ms pushed-grn ease-out;
+animation: 700ms pushed-grn ease-out;
+}
+
+.clicked-red {
+-webkit-animation: 700ms pushed-red ease-out;
+-moz-animation: 700ms pushed-red ease-out;
+-ms-animation: 700ms pushed-red ease-out;
+-o-animation: 700ms pushed-red ease-out;
+animation: 700ms pushed-red ease-out;
+}
+
+.clicked-ylw {
+-webkit-animation: 700ms pushed-ylw ease-out;
+-moz-animation: 700ms pushed-ylw ease-out;
+-ms-animation: 700ms pushed-ylw ease-out;
+-o-animation: 700ms pushed-ylw ease-out;
+animation: 700ms pushed-ylw ease-out;
+}
+
+.clicked-bl {
+-webkit-animation: 700ms pushed-bl ease-out;
+-moz-animation: 700ms pushed-bl ease-out;
+-ms-animation: 700ms pushed-bl ease-out;
+-o-animation: 700ms pushed-bl ease-out;
+animation: 700ms pushed-bl ease-out;
+
+}
+@keyframes pushed-grn{
+0% {transform: scale(1);}
+35% {transform: scale(.9) translate(.3em,.3em);}
+100% {transform: scale(1);}
+}
+
+@keyframes pushed-red{
+0% {transform: scale(1);}
+35% {transform: scale(.9) translate(.3em,.3em);}
+100% {transform: scale(1);}
+}
+
+@keyframes pushed-ylw{
+0% {transform: scale(1);}
+35% {transform: scale(.9) translate(.3em,.3em);}
+100% {transform: scale(1);}
+}
+@keyframes pushed-bl{
+0% {transform: scale(1);}
+35% {transform: scale(.9) translate(.3em,.3em);}
+100% {transform: scale(1);}
+}
+
+@-ms-keyframes pushed-bl{
+0% {-ms-transform: scale(1);}
+35% {-ms-transform: scale(.9) translate(.3em,.3em);}
+100% {-ms-transform: scale(1);}
+}
+@-moz-keyframes pushed-bl{
+0% {-moz-transform: scale(1);}
+35% {-moz-transform: scale(.9) translate(.3em,.3em);}
+100% {-moz-transform: scale(1);}
+}
+@-o-keyframes pushed-bl{
+0% {-o-transform: scale(1);}
+35% {-o-transform: scale(.9) translate(.3em,.3em);}
+100% {-o-transform: scale(1);}
+}
+@-webkit-keyframes pushed-bl{
+0% {-webkit-transform: scale(1);}
+35% {-webkit-transform: scale(.9) translate(.3em,.3em);}
+100% {-webkit-transform: scale(1);}
+}
+
